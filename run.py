@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def main():
+def create_app():
     app = Flask(__name__)
 
     from api.ai import api_blueprint
@@ -14,8 +14,11 @@ def main():
 
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
-    app.run(debug=True)
+    return app
+
+
+app = create_app()
 
 
 if __name__ == "__main__":
-    main()
+    app.run(port=5000)
