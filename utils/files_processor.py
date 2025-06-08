@@ -40,9 +40,14 @@ def extract_text_from_file_docx(file):
 
 def load_sample_essays():
     sample_essays = []
-    datasets_dir = os.path.join(
-        os.path.dirname(os.path.dirname(__file__)), "datasets", "sample_essays"
-    )
+    if "tok" in __file__:
+        datasets_dir = os.path.join(
+            os.path.dirname(os.path.dirname(__file__)), "datasets", "sample_essays_tok"
+        )
+    elif "ee" in __file__:
+        datasets_dir = os.path.join(
+            os.path.dirname(os.path.dirname(__file__)), "datasets", "sample_essays_ee"
+        )
 
     if not os.path.exists(datasets_dir):
         raise FileNotFoundError(
