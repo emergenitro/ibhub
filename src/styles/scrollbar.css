@@ -1,0 +1,120 @@
+/* styles/scrollbar.css */
+
+.scrollbar {
+  --scrollbar-track: initial;
+  --scrollbar-thumb: initial;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+.scrollbar:hover {
+  --scrollbar-track: initial;
+  --scrollbar-thumb: initial;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+.scrollbar {
+  scrollbar-width: auto;
+}
+.scrollbar.scrollbar-thin {
+  scrollbar-width: thin;
+}
+.scrollbar.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+.scrollbar.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+}
+.scrollbar.scrollbar-thumb-rounded,
+.scrollbar.scrollbar-thumb-rounded-md,
+.scrollbar.scrollbar-thumb-rounded-lg,
+.scrollbar.scrollbar-thumb-rounded-full {
+  --scrollbar-thumb-border-radius: initial;
+}
+.scrollbar.scrollbar-track-rounded,
+.scrollbar.scrollbar-track-rounded-md,
+.scrollbar.scrollbar-track-rounded-lg,
+.scrollbar.scrollbar-track-rounded-full {
+  --scrollbar-track-border-radius: initial;
+}
+.scrollbar.scrollbar-thumb-rounded::-webkit-scrollbar-thumb,
+.scrollbar.scrollbar-thumb-rounded-md::-webkit-scrollbar-thumb,
+.scrollbar.scrollbar-thumb-rounded-lg::-webkit-scrollbar-thumb,
+.scrollbar.scrollbar-thumb-rounded-full::-webkit-scrollbar-thumb {
+  border-radius: var(--scrollbar-thumb-border-radius);
+}
+.scrollbar.scrollbar-track-rounded::-webkit-scrollbar-track,
+.scrollbar.scrollbar-track-rounded-md::-webkit-scrollbar-track,
+.scrollbar.scrollbar-track-rounded-lg::-webkit-scrollbar-track,
+.scrollbar.scrollbar-track-rounded-full::-webkit-scrollbar-track {
+  border-radius: var(--scrollbar-track-border-radius);
+}
+.scrollbar-track-transparent {
+  --scrollbar-track: transparent;
+}
+.scrollbar-thumb-transparent {
+  --scrollbar-thumb: transparent;
+}
+.hover\:scrollbar-track-transparent:hover {
+  --scrollbar-track: transparent;
+}
+.hover\:scrollbar-thumb-transparent:hover {
+  --scrollbar-thumb: transparent;
+}
+.scrollbar-track-inherit {
+  --scrollbar-track: inherit;
+}
+.scrollbar-thumb-inherit {
+  --scrollbar-thumb: inherit;
+}
+.hover\:scrollbar-track-inherit:hover {
+  --scrollbar-track: inherit;
+}
+.hover\:scrollbar-thumb-inherit:hover {
+  --scrollbar-thumb: inherit;
+}
+.scrollbar-track-current {
+  --scrollbar-track: currentColor;
+}
+.scrollbar-thumb-current {
+  --scrollbar-thumb: currentColor;
+}
+.hover\:scrollbar-track-current:hover {
+  --scrollbar-track: currentColor;
+}
+.hover\:scrollbar-thumb-current:hover {
+  --scrollbar-thumb: currentColor;
+}
+
+/* This is where you can use @theme to access your Tailwind config */
+.scrollbar-thumb-blue-500 {
+  --scrollbar-thumb: theme(colors.blue.500);
+}
+.scrollbar-track-blue-200 {
+    --scrollbar-track: theme(colors.blue.200);
+}
+.scrollbar-thumb-gray-500 {
+    --scrollbar-thumb: theme(colors.gray.500);
+}
+.scrollbar-track-gray-200 {
+    --scrollbar-track: theme(colors.gray.200);
+}
+/* Add more color utilities here as needed, following the pattern */
+/* Example for your project's theme: */
+.scrollbar-track-black {
+    --scrollbar-track: black;
+}
+.scrollbar-thumb-\[\#3a7eff\] {
+    --scrollbar-thumb: #3a7eff;
+}
